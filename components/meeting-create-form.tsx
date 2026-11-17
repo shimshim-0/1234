@@ -84,7 +84,7 @@ export function MeetingCreateForm() {
             value={expectedCount}
             onChange={(event) => setExpectedCount(event.target.value)}
             min={1}
-            max={100}
+            max={20}
             type="number"
             className="focus-ring rounded-md border border-line px-3 py-3 text-base"
           />
