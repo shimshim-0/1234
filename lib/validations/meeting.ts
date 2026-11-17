@@ -3,7 +3,7 @@ import { z } from "zod";
 export const createMeetingSchema = z
   .object({
     title: z.string().trim().min(1, "모임명을 입력하세요.").max(80, "모임명은 80자 이하로 입력하세요."),
-    expectedCount: z.coerce.number().int().min(1, "모임 인원은 1명 이상이어야 합니다.").max(100, "모임 인원은 100명 이하로 입력하세요."),
+    expectedCount: z.coerce.number().int().min(1, "모임 인원은 1명 이상이어야 합니다.").max(20, "모임 인원은 20명 이하로 입력하세요."),
     startDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "시작일을 선택하세요."),
     endDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "종료일을 선택하세요.")
   })
